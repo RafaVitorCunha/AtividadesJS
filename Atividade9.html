@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Ubuntu", sans-serif;
+
+        }
+
+        .menu {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(203, 108, 64);
+
+        }
+
+        .contraste {
+            background-color: black;
+            color: rgb(255, 255, 240);
+
+        }
+
+        .sorvete {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        input {
+            height: 25px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+
+        <div class="menu">
+
+            <h1>Sorvete preferido</h1>
+
+        </div>
+
+        <div class="">
+            <a>
+                <p>Alto contraste</p>
+            </a>
+        </div>
+        <div class="sorvete">
+            <input type="text">
+            <p></p>
+        </div>
+    </main>
+    <script>
+
+        let valorConstraste = 0;
+        let contraste = document.querySelector("a");
+        let texto = document.querySelectorAll("p");
+        let input = document.querySelector("input");
+        let divs = document.querySelectorAll("div");
+
+
+        input.addEventListener('keyup', () => {
+            let textoDigitado = input.value;
+
+            if (textoDigitado == "flocos") {
+                texto[1].innerText = "Ahh, mas chocolate é o meu favorito...";
+            } else if (textoDigitado == "chocolate") {
+                texto[1].innerText = "eu amo sorvete de chocolate";
+
+            } else {
+                texto[1].innerText = "Ahh, eu esperava um sabor de sorvete...";
+            }
+        });
+
+        contraste.addEventListener('click', () => {
+
+            if (valorConstraste == 0) {
+                console.log("a")
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'yellow';
+                divs[0].classList.add('contraste');
+                valorConstraste = 1;
+            } else {
+                divs[0].classList.remove('contraste');
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                valorConstraste = 0;
+            }
+
+        })
+    </script>
+</body>
+
+</html>
