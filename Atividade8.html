@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+<body>
+    
+    <input type="text">
+    <p></p>
+
+
+
+    <script>
+        let texto = document.querySelector("p")
+        let input = document.querySelector("input");
+        input.addEventListener('keyup',()=>{
+            let textoDigitado = input.value;
+
+            if(textoDigitado == "flocos"){
+                texto.innerText = "Ahh, mas chocolate é o meu favorito...";
+            }else if(textoDigitado == "chocolate"){
+                texto.innerText = "eu amo sorvete de chocolate";
+                
+            }else{
+                texto.innerText = "Ahh, eu esperava um sabor de sorvete...";
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>
