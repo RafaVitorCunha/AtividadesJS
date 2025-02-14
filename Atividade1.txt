@@ -1,0 +1,2 @@
+O JavaScript, por sua vez, é a principal linguagem de programação do front-end. Como uma linguagem de programação, envolve lógica típica, com funções, eventos e variáveis.
+Permite criar o dinamismo da página e controlar a interação direta com os usuários com essa lógica — como a reação a cliques, por exemplo.
