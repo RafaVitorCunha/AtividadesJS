@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+    <style>
+        .imagem {
+            width: 300px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <img class="imagem" src="https://th.bing.com/th/id/OIP.E4pLRq9gH3Aq9BR8UgdetQHaM2?pid=ImgDet&w=190&h=329&c=7" alt="Dipper Pines">
+    <p></p>
+
+    <script>
+        let img = document.querySelector("img");
+        let texto = document.querySelector("p");
+
+        img.addEventListener('click', () => {
+            texto.innerText = "Tenho que anotar isso no meu diário!";
+        });
+
+        img.addEventListener('mouseenter', () => {
+            texto.innerText = "Tem algo estranho aqui..";
+        });
+
+        img.addEventListener('mouseleave', () => {
+            texto.innerText = "Não? Ok, vou continuar procurando..";
+        });
+
+        img.addEventListener('mousemove', () => {
+            texto.innerText = "Ei! Você viu minha irmã Mabel?";
+        });
+    </script>
+</body>
+</html>
