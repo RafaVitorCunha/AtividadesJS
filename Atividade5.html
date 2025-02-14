@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Item 1</li>
+      </ul>
+      <button id="addItem">Adicionar Item</button>
+      <script>
+        document.getElementById("addItem").addEventListener("click", () => {
+          const li = document.createElement("li");
+          li.textContent = `Item ${document.querySelectorAll("li").length + 1}`;
+          document.getElementById("lista").appendChild(li);
+        });
+      </script>
+      
+</body>
+</html>
